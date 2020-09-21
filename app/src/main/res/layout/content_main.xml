@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    >
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATOS DEL ARTÍCULO"
+        android:textAlignment="center"
+        android:background="#CB2196F3"
+        android:layout_marginTop="5dp"
+        android:textSize="24dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="666dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gris"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="167dp"
+
+                android:src="@drawable/comput" />
+
+            <EditText
+                android:id="@+id/et_codigo"
+                android:layout_width="376dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:textAppearance="@android:style/TextAppearance"
+                android:layout_marginRight="15dp"
+                android:background="#FFE0B2"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_codigo"
+                android:drawablePadding="5dp"
+                android:hint="Ingrese el código"
+                android:inputType="number"
+                android:paddingLeft="25dp"
+                 />
+
+            <EditText
+                android:id="@+id/et_descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#CEFFE0B2"
+                android:drawableStart="@drawable/ic_desarticulo"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Ingrese la descripción del artículo"
+                android:paddingLeft="25dp"
+                android:shadowColor="#0C0C0C"
+                android:shadowRadius="5" />
+
+            <EditText
+                android:id="@+id/et_precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="#D0FFE0B2"
+                android:textAppearance="@android:style/TextAppearance"
+                android:drawableStart="@drawable/ic_precio"
+                android:drawablePadding="5dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Ingrese el precio del artículo"
+                android:inputType="numberDecimal"
+                android:paddingLeft="25dp"
+
+                android:shadowColor="#0C0C0C"
+                android:shadowRadius="5" />
+
+            <Button
+                android:id="@+id/btn_guardar"
+                android:layout_width="358dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="15dp"
+                android:background="#A32196F3"
+                android:drawableRight="@drawable/ic_guardar"
+                android:drawablePadding="-130dp"
+                android:onClick="alta"
+                android:paddingRight="140dp"
+                android:shadowColor="#565954"
+                android:shadowDx="-5"
+                android:shadowDy="8"
+                android:shadowRadius="8"
+                android:text="Guardar"
+                android:textColor="#000000"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btn_consultar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#832196F3"
+                android:drawableRight="@drawable/ic_consultar"
+                android:drawablePadding="-35dp"
+                android:onClick="consultarporcodigo"
+                android:paddingLeft="55dp"
+                android:paddingRight="80dp"
+                android:shadowColor="#565954"
+                android:shadowDx="-5"
+                android:shadowDy="8"
+                android:shadowRadius="8"
+                android:text="Consultar por código"
+                android:textColor="#000000"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btn_consultar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#9C2196F3"
+                android:drawableRight="@drawable/ic_consultar"
+                android:drawablePadding="-35dp"
+                android:onClick="consultarpordescripcion"
+                android:paddingLeft="40dp"
+                android:paddingRight="55dp"
+                android:shadowColor="#565954"
+                android:shadowDx="-5"
+                android:shadowDy="8"
+                android:shadowRadius="8"
+                android:text="Consultar por descripción"
+                android:textColor="#000000"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btn_eliminar"
+                android:layout_width="266dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#902196F3"
+                android:drawableRight="@drawable/ic_borrar"
+                android:drawablePadding="-140dp"
+                android:onClick="bajaporcodigo"
+                android:shadowColor="#565954"
+                android:shadowDx="-5"
+                android:shadowDy="8"
+                android:shadowRadius="8"
+                android:text="Borrar"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btn_actualizar"
+                android:layout_width="264dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="#CB2196F3"
+                android:drawableRight="@drawable/ic_escribir"
+                android:drawablePadding="-140dp"
+                android:onClick="modificacion"
+                android:paddingRight="15dp"
+                android:shadowColor="#565954"
+                android:shadowDx="-5"
+                android:shadowDy="8"
+                android:shadowRadius="8"
+                android:text="Editar"
+                android:textColor="#000000"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
